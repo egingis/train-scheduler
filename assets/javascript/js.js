@@ -9,7 +9,7 @@ var config = {
 
 $(document).ready(function(){
 	// 1. Link to Firebase
-	var trainData = firebase.database();
+	var trainData = firebase.database("https://trainscheduler-9f045.firebaseio.com/");
 
 
 	// 2. Button for adding Trains
