@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+
 <head>
 	<title>Train Table</title>
 	<meta charset="UTF-8">
-	
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">	<script src="https://code.jquery.com/jquery.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
- 	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+
+
+
 </head>
+
 <body>
 	<div class="container">
 		<div class="jumbotron">
@@ -19,17 +21,18 @@
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-			<!-- Current Trains -->
+				<!-- Current Trains -->
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title"><strong>Current Train</strong></h3>
+						<h3 class="panel-title">
+							<strong>Current Train</strong>
+						</h3>
 					</div>
 					<div class="panel-body">
 						<table class="table table-hover" id='trainTable'>
 							<thead>
 								<tr>
 									<th>Train Name</th>
-									<th>Line</th>
 									<th>Destination</th>
 									<th>Frequency</th>
 									<th>Next Arrival</th>
@@ -37,16 +40,18 @@
 								</tr>
 							</thead>
 							<tbody>
-								
+
 							</tbody>
 						</table>
 					</div>
 				</div>
 
-			<!-- Add New Trains -->
+				<!-- Add New Trains -->
 				<div class="panel panel-primary">
 					<div class="panel-heading">
-						<h3 class="panel-title"><strong>Add a New Train</strong></h3>
+						<h3 class="panel-title">
+							<strong>Add a New Train</strong>
+						</h3>
 					</div>
 
 					<div class="panel-body">
@@ -55,11 +60,6 @@
 							<div class="form-group">
 								<label for="">Train Name</label>
 								<input type="text" class="form-control" id="trainNameInput">
-							</div>
-
-							<div class="form-group">
-								<label for="">Line</label>
-								<input type="text" class="form-control" id="lineInput">
 							</div>
 
 							<div class="form-group">
@@ -76,7 +76,7 @@
 								<label for="">Frequency (min)</label>
 								<input type="text" class="form-control" id="frequencyInput">
 							</div>
-							
+
 							<button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
 						</form>
 					</div>
@@ -84,10 +84,27 @@
 			</div>
 		</div>
 	</div>
-	<!-- Javascript -->
-    <script src="assets/javascript/js.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+	<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyASl5S3sVA4avdUaIkiOUU8-xJn0GiOkbg",
+			authDomain: "trainscheduler-9f045.firebaseapp.com",
+			databaseURL: "https://trainscheduler-9f045.firebaseio.com",
+			projectId: "trainscheduler-9f045",
+			storageBucket: "trainscheduler-9f045.appspot.com",
+			messagingSenderId: "938768978704"
+		};
+		firebase.initializeApp(config);
+	</script>
+	<script src="assets/javascript/js.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	 crossorigin="anonymous"></script>
 </body>
+
 </html>
